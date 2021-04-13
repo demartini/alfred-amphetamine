@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.demartini.amphetamine</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>0951CE06-8E88-4B6B-B769-A5C2FF2B8F6C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B64DF84D-465C-43C9-A194-46B1FB25DEB2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>173317A2-6C75-49EB-9EDA-7C641596AF0E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E16E5454-8AF5-4CAD-9A98-280552D4F298</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>62438133-C76F-4D0F-AA32-85CF3BD9CAC3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B64DF84D-465C-43C9-A194-46B1FB25DEB2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>66ED2096-00AD-4BE3-B754-D1A5BDBD63F1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0951CE06-8E88-4B6B-B769-A5C2FF2B8F6C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E16E5454-8AF5-4CAD-9A98-280552D4F298</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B64DF84D-465C-43C9-A194-46B1FB25DEB2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F4FD5765-D3CB-4DCE-BAC5-C746897304F6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>62438133-C76F-4D0F-AA32-85CF3BD9CAC3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Iolar Demartini Junior</string>
+	<key>description</key>
+	<string>Alfred Workflow for Amphetamine.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Amphetamine for Alfred</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)	tell application "Amphetamine"		set sessionActiveTest to session is active		if sessionActiveTest is false then			start new session			"Started default session."		else			tell me to activate			display dialog "An Amphetamine session is already running." buttons {"OK"} default button "OK"		end if	end tellend alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>62438133-C76F-4D0F-AA32-85CF3BD9CAC3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>amp start</string>
+				<key>subtext</key>
+				<string>Starts the default Amphetamine session.</string>
+				<key>text</key>
+				<string>Start Default Session</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>F4FD5765-D3CB-4DCE-BAC5-C746897304F6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>amp end</string>
+				<key>subtext</key>
+				<string>Ends the current Amphetamine session.</string>
+				<key>text</key>
+				<string>End Current Session</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>66ED2096-00AD-4BE3-B754-D1A5BDBD63F1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)	tell application "Amphetamine"		set sessionActiveTest to session is active		if sessionActiveTest is true then			end session			"Ended current session."		else			tell me to activate			display dialog "No Amphetamine session running." buttons {"OK"} default button "OK"		end if	end tellend alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>0951CE06-8E88-4B6B-B769-A5C2FF2B8F6C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Amphetamine for Alfred</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>B64DF84D-465C-43C9-A194-46B1FB25DEB2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>amp</string>
+				<key>subtext</key>
+				<string>Sets the Amphetamine session for {query} minutes.</string>
+				<key>text</key>
+				<string>Set Duration Time</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>173317A2-6C75-49EB-9EDA-7C641596AF0E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)	tell application "Amphetamine"		set sessionActiveTest to session is active		if sessionActiveTest is false then			start new session with options {duration:q, interval:minutes, displaySleepAllowed:false}			"The session will be active for " &amp; q &amp; " minutes."		else			tell me to activate			display dialog "An Amphetamine session is already running." buttons {"OK"} default button "OK"		end if	end tellend alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>E16E5454-8AF5-4CAD-9A98-280552D4F298</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>0951CE06-8E88-4B6B-B769-A5C2FF2B8F6C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>205</integer>
+			<key>ypos</key>
+			<integer>135</integer>
+		</dict>
+		<key>173317A2-6C75-49EB-9EDA-7C641596AF0E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>15</integer>
+			<key>ypos</key>
+			<integer>260</integer>
+		</dict>
+		<key>62438133-C76F-4D0F-AA32-85CF3BD9CAC3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>205</integer>
+			<key>ypos</key>
+			<integer>15</integer>
+		</dict>
+		<key>66ED2096-00AD-4BE3-B754-D1A5BDBD63F1</key>
+		<dict>
+			<key>xpos</key>
+			<integer>15</integer>
+			<key>ypos</key>
+			<integer>135</integer>
+		</dict>
+		<key>B64DF84D-465C-43C9-A194-46B1FB25DEB2</key>
+		<dict>
+			<key>xpos</key>
+			<integer>385</integer>
+			<key>ypos</key>
+			<integer>135</integer>
+		</dict>
+		<key>E16E5454-8AF5-4CAD-9A98-280552D4F298</key>
+		<dict>
+			<key>xpos</key>
+			<integer>205</integer>
+			<key>ypos</key>
+			<integer>260</integer>
+		</dict>
+		<key>F4FD5765-D3CB-4DCE-BAC5-C746897304F6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>15</integer>
+			<key>ypos</key>
+			<integer>15</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string></string>
+	<key>webaddress</key>
+	<string>https://github.com/demartini/alfred-amphetamine#readme</string>
+</dict>
+</plist>

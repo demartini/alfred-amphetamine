@@ -1,0 +1,56 @@
+{
+  "name": "alfred-amphetamine",
+  "version": "0.0.0",
+  "description": "Alfred Workflow for Amphetamine.",
+  "author": {
+    "name": "Iolar Demartini Junior",
+    "email": "iolardemartini@gmail.com",
+    "url": "https://demartini.dev"
+  },
+  "bugs": {
+    "url": "https://github.com/demartini/alfred-amphetamine/issues"
+  },
+  "contributors": [
+    {
+      "name": "Alfred Workflow for AmphetamineContributors",
+      "url": "https://github.com/demartini/alfred-amphetamine/graphs/contributors"
+    }
+  ],
+  "engines": {
+    "node": ">= 12",
+    "npm": ">= 6",
+    "yarn": ">=1.20.0"
+  },
+  "files": [
+    "icon.png",
+    "info.plist"
+  ],
+  "homepage": "https://github.com/demartini/alfred-amphetamine#readme",
+  "keywords": [
+    "alfred",
+    "alfy",
+    "amphetamine",
+    "caffeine",
+    "workflow"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/demartini/alfred-amphetamine.git"
+  },
+  "scripts": {
+    "markdownlint:fix": "markdownlint '**/*.md' --fix",
+    "markdownlint:report": "markdownlint '**/*.md'",
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup",
+    "semantic-release": "semantic-release"
+  },
+  "dependencies": {
+    "alfy": "^0.10.0"
+  },
+  "devDependencies": {
+    "@demartini/commitlint-config": "^0.1.2",
+    "@demartini/markdownlint-config": "^0.1.1",
+    "@demartini/semantic-release-config": "^0.1.0"
+  }
+}
