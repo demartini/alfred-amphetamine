@@ -46,7 +46,7 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "alfy": "^0.10.0"
+    "alfy": "^0.12.1"
   },
   "devDependencies": {
     "@demartini/commitlint-config": "^0.1.2",
