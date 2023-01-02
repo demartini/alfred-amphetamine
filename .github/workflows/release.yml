@@ -22,7 +22,7 @@ jobs:
           node-version: 14
 
       - name: Install Dependencies with Caching
-        uses: bahmutov/npm-install@v1.8.25
+        uses: bahmutov/npm-install@v1.8.27
 
       - name: Release
         env:
